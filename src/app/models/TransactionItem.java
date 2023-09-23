@@ -1,4 +1,4 @@
-package models;
+package app.models;
 
 public class TransactionItem {
     private final String productName;

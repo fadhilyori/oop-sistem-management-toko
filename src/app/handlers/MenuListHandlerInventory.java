@@ -1,8 +1,8 @@
-package handlers;
+package app.handlers;
 
-import databases.StockList;
-import models.Stock;
-import utils.ScreenUtil;
+import app.databases.StockList;
+import app.models.Stock;
+import app.utils.ScreenUtil;
 
 public class MenuListHandlerInventory extends MenuListHandler {
     private void printOptions() {

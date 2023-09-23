@@ -1,10 +1,10 @@
-package handlers;
+package app.handlers;
 
-import databases.StockList;
-import databases.TransactionList;
-import models.Stock;
-import models.Transaction;
-import models.TransactionItem;
+import app.databases.StockList;
+import app.databases.TransactionList;
+import app.models.Stock;
+import app.models.Transaction;
+import app.models.TransactionItem;
 
 import java.util.List;
 

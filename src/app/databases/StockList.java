@@ -1,6 +1,6 @@
-package databases;
+package app.databases;
 
-import models.Stock;
+import app.models.Stock;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,6 +1,6 @@
-package handlers;
+package app.handlers;
 
-import utils.ScreenUtil;
+import app.utils.ScreenUtil;
 
 public class MenuListHandlerSale extends MenuListHandler {
 

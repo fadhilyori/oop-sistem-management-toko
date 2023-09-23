@@ -1,6 +1,8 @@
-import databases.StockList;
-import handlers.MenuListHandlerHome;
-import models.Stock;
+package app;
+
+import app.databases.StockList;
+import app.handlers.MenuListHandlerHome;
+import app.models.Stock;
 
 public class Main {
     public static void main(String[] args) {

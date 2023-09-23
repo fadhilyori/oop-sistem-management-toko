@@ -1,6 +1,6 @@
-package databases;
+package app.databases;
 
-import models.Transaction;
+import app.models.Transaction;
 
 import java.util.ArrayList;
 import java.util.List;
