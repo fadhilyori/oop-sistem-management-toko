@@ -10,7 +10,12 @@ import java.util.NoSuchElementException;
 
 public class MenuListHandlerOrder extends MenuListHandler {
 
-    private final Transaction transaction = new Transaction();
+    private final Transaction transaction;
+
+    public MenuListHandlerOrder() {
+        this.transaction = new Transaction();
+    }
+
 
     private void printOptions() {
         System.out.println("\n======= Daftar Stok Produk =======");
@@ -38,19 +43,18 @@ public class MenuListHandlerOrder extends MenuListHandler {
                 return;
             case 97:
                 editMenu();
-                this.show();
                 break;
             case 98:
                 hapusMenu();
-                this.show();
                 break;
             case 99:
                 simpanMenu();
                 return;
             default:
                 orderMenu(choice);
-                this.show();
         }
+
+        this.show();
     }
 
     public void showChart(Boolean showIDs) {

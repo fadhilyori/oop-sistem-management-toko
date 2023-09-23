@@ -60,18 +60,15 @@ public class MenuListHandlerInventory extends MenuListHandler {
                 return;
             case 1:
                 showAllProduct();
-                this.show();
                 break;
             case 2:
                 showAddStock();
-                this.show();
                 break;
             case 3:
                 showRemoveStock();
-                this.show();
                 break;
-            default:
-                this.show();
         }
+
+        this.show();
     }
 }

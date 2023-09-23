@@ -32,11 +32,11 @@ public class Transaction {
         } catch (IllegalArgumentException e) {
             throw new RuntimeException("insufficient stock for " + stock.getName());
         } finally {
-            this.updateTotalprice();
+            this.updateTotalPrice();
         }
     }
 
-    public void updateTotalprice() {
+    public void updateTotalPrice() {
         int total = 0;
         for (TransactionItem t : this.transactionItemList) {
             total += t.getTotalPrice();
@@ -53,7 +53,7 @@ public class Transaction {
 
             stock.increaseStock(transactionItem.getAmount() - amount);
             transactionItem.setAmount(amount);
-            this.updateTotalprice();
+            this.updateTotalPrice();
             break;
         }
     }
@@ -65,7 +65,7 @@ public class Transaction {
         stock.increaseStock(transactionItem.getAmount() - amount);
         transactionItem.setAmount(amount);
 
-        this.updateTotalprice();
+        this.updateTotalPrice();
     }
 
     public void remove(Stock stock) {
@@ -73,20 +73,20 @@ public class Transaction {
             if (transactionItem.getProductName().equals(stock.getName())) {
                 stock.increaseStock(transactionItem.getAmount());
                 this.transactionItemList.remove(transactionItem);
-                this.updateTotalprice();
+                this.updateTotalPrice();
                 return;
             }
         }
     }
 
-    public void remove(int i) {
-        TransactionItem transactionItem = this.transactionItemList.get(i);
+    public void remove(int id) {
+        TransactionItem transactionItem = this.transactionItemList.get(id);
         Stock stock = StockList.getInstance().get(transactionItem.getProductName());
 
         stock.increaseStock(transactionItem.getAmount());
-        this.transactionItemList.remove(i);
+        this.transactionItemList.remove(id);
 
-        this.updateTotalprice();
+        this.updateTotalPrice();
     }
 
     public int getTotalPrice() {
