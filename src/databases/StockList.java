@@ -24,16 +24,16 @@ public class StockList {
         this.stockList.add(stock);
     }
 
-    public void remove(int i) {
-        this.stockList.remove(i);
+    public void remove(int id) {
+        this.stockList.remove(id);
     }
 
     public List<Stock> getList() {
         return this.stockList;
     }
 
-    public Stock get(int i) {
-        return this.stockList.get(i);
+    public Stock get(int id) {
+        return this.stockList.get(id);
     }
 
     public Stock get(String name) {
